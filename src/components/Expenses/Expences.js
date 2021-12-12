@@ -1,7 +1,7 @@
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 
-function Expenses({ expenses }) {
+const Expenses = ({ expenses }) => {
 
     return expenses.map(item => {
         return (<div className='Expenses'><ExpenseItem
