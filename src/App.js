@@ -31,7 +31,8 @@ const App = () => {
   const addExpenseHandler = (expense) => {
     // the previosu state in the parameter of the method below of automatically called from react. 
     setExpenses(previousExpenses => {
-      return [expense, ...previousExpenses];
+      let exp =  [expense, ...previousExpenses];
+      return exp.filter(ex => ex.date.getFullYear() !== 2020)
     })
   };
 
